@@ -41,12 +41,6 @@ class LoginScreen(QDialog):
             if result_pass == password:
                 # başarılı giriş yapıldığı zaman, message box kaldırılıp bu block üzerinden sonraki sayfaya yönlendirilecek.
                 self.welcomeAccount()
-                """message = QMessageBox()
-                message.setIcon(QMessageBox.Information)
-                message.setText("You have successfully logged in")
-                message.setWindowTitle("Login")
-                message.setStandardButtons(QMessageBox.Ok)
-                message.exec()"""
                 self.error_field.setText("")
             else:
                 self.error_field.setText("Invalid username or password.")
