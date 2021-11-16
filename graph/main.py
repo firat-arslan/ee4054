@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import*
 from PyQt5.QtCore import QDate, QDateTime
 from PyQt5.uic import loadUi
-from matplotlib.backends.backend_qt5agg import (NavigationToolbar2QT, FigureCanvas)
+from matplotlib.backends.backend_qt5agg import (NavigationToolbar2QT as NavigationToolbar )
 import pandas as pd
 import DailyConverter
     
@@ -17,7 +17,7 @@ class MatplotlibWidget(QMainWindow):
         self.dateEditOutput.setCalendarPopup(True)
 
         self.button.clicked.connect(self.graph)
-        #self.addToolBar(NavigationToolbar(self.matplotlib_widget.canvas, self))
+        self.addToolBar(NavigationToolbar(self.matplotlib_widget.canvas, self))
 
 
     def graph(self):
